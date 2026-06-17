@@ -34,7 +34,7 @@ public class ModeOfArray {
     static void main() {
         int[] arr = {1,2,2,2,2,3,4,3,4,5,4};
         int max = mod(arr);
-        System.out.println(max + " Have MAx Frequency");
+        System.out.println(max + " Have Max Frequency");
     }
 
 }

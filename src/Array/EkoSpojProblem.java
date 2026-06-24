@@ -5,9 +5,9 @@ public class EkoSpojProblem {
     static boolean isVerified(int[] tree, int m, int mid){
         int woodCollect = 0;
 
-        for(int i=0 ; i<tree.length ; i++){
-            if(tree[i] >= mid){
-                woodCollect += (tree[i] - mid);
+        for (int j : tree) {
+            if (j >= mid) {
+                woodCollect += (j - mid);
             }
         }
         if(woodCollect >= m) return true;
@@ -42,8 +42,11 @@ public class EkoSpojProblem {
     }
 
     static void main() {
-        int[] tree = {20,15,10,17};
-        int m = 7;
+//        int[] tree = {20,15,10,17};
+//        int m = 7;
+        int[] tree = {1,2,3,4,5};
+        int m = 5;
+
         int ans = check(tree, m);
         System.out.println(ans);
     }

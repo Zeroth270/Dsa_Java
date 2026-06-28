@@ -7,23 +7,31 @@ public class SingleNonDuplicateInDuplicateArr {
         int s = 0;
         int e = n-1;
 
+        int mid = s + (e-s) / 2;
+
         while(s <= e){
-            int mid = s + (s-e) / 2;
 
             if(s == e) return mid;
 
-            int currentValue = arr[mid];
-            int previous = -1;
+            if((mid & 1) == 1){
+                //iska matlab vo odd he, to usey even kar do
+                mid--;
+            }
 
-            if(arr[previous])
-
+            if(arr[mid] == arr[mid+1]){
+                s = mid + 2;
+            }
+            else{
+                e = mid -1;
+            }
+            mid = s + (e-s) / 2;
         }
-
+        return arr[mid];
     }
 
     static void main(){
-        int[] arr = {10,10,20,20,30,30,40,40,50,60,60};
-        int ans = nonDuplicate(arr);
-        System.out.println(ans);
+        int[] arr = {10,10,20,30,30,40,40,50,50,60,60};
+        System.out.println(nonDuplicate(arr));
+
     }
 }

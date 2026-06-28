@@ -41,8 +41,9 @@ public class OccurrenceOfElement {
     }
 
     static void main() {
-        int[] arr = {10,20,20,20,20,30,40,50};
-        int target = 200;
+      //  int[] arr = {10,20,20,20,20,30,40,50};
+        int[] arr = {5,7,7,8,8,10};
+        int target = 8;
         int lb = lowerBound(arr,target);
         int ub = upperBound(arr,target);
         int ans = ub - lb;

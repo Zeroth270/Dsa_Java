@@ -22,7 +22,7 @@ public class MostFreqVowelAndConsonant {
         }
 
         int vowelMax = Collections.max(vowel.values());
-        int conMax = Collections.max(con.values());
+        int conMax = Collections.max(con.values()); 
 
         System.out.println(vowelMax + conMax);
 
